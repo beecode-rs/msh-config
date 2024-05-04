@@ -19,18 +19,6 @@ blocks:
             - docker save -o bc-msh-config.tar bc-msh-config
             - cache store bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA bc-msh-config.tar
 
-  - name: Run Tests
-    task:
-      secrets:
-        - name: bc-msh-config-secret
-      jobs:
-        - name: Test and coverage
-          commands:
-            - checkout
-            - cache restore bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA
-            - docker load -i bc-msh-config.tar
-            - docker run --rm -e CODECOV_TOKEN bc-msh-config sh -c 'npm run test:int && npm run test-coverage-unit && npm run test-coverage-unit-publish'
-
   - name: Bump Version
     task:
       secrets:
@@ -39,6 +27,7 @@ blocks:
       jobs:
         - name: Build
           commands:
+            - checkout
             - cache restore bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA
             - docker load -i bc-msh-config.tar
             - touch version.txt
