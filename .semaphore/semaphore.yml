@@ -1,0 +1,56 @@
+version: v1.0
+name: Test
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+
+blocks:
+  - name: Create Docker image
+    task:
+      secrets:
+        - name: mb-docker-hub
+      jobs:
+        - name: Build and store image in local registry
+          commands:
+            - checkout
+            - echo $DOCKER_PASSWORD | docker login --username "$DOCKER_USERNAME" --password-stdin
+            - docker build -f ./resource/docker/Dockerfile -t bc-msh-config .
+            - docker save -o bc-msh-config.tar bc-msh-config
+            - cache store bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA bc-msh-config.tar
+
+  - name: Run Tests
+    task:
+      secrets:
+        - name: bc-msh-config-secret
+      jobs:
+        - name: Test and coverage
+          commands:
+            - checkout
+            - cache restore bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA
+            - docker load -i bc-msh-config.tar
+            - docker run --rm -e CODECOV_TOKEN bc-msh-config sh -c 'npm run test:int && npm run test-coverage-unit && npm run test-coverage-unit-publish'
+
+  - name: Bump Version
+    task:
+      secrets:
+        - name: bc-git-secret
+        - name: bc-npm-secret
+      jobs:
+        - name: Build
+          commands:
+            - cache restore bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA
+            - docker load -i bc-msh-config.tar
+            - touch version.txt
+            - sudo chown -R packer:packer version.txt
+            - docker run --rm -v ./version.txt:/usr/app/version.txt -e GH_TOKEN -e NPM_TOKEN -e GH_USER -e CI bc-msh-config npm run npm-semantic-release
+            - cat version.txt
+            - cache store bc-msh-config-version-$SEMAPHORE_GIT_SHA version.txt
+    skip:
+      when: branch != 'main'
+
+promotions:
+  - name: Alpha Deploy
+    pipeline_file: alpha.yml
+  - name: Production Deploy
+    pipeline_file: prod.yml
