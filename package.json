@@ -23,7 +23,9 @@
 		"lint-prettier-fix": "prettier --write {**/*,*}.{js,jsx,ts,tsx}",
 		"npm-lock-file-generate": "npm i --package-lock-only --prefix ./",
 		"npm-ncu-check": "npx ncu",
-		"npm-ncu-update": "npx ncu -u"
+		"npm-ncu-update": "npx ncu -u",
+		"npm-semantic-release": "semantic-release",
+		"npm-semantic-release-check": "npm run npm-semantic-release -- --dry-run --no-ci"
 	},
 	"commitlint": {
 		"extends": [
