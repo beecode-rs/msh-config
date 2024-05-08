@@ -18,8 +18,6 @@ blocks:
             - docker build -f ./resource/docker/Dockerfile -t bc-msh-config .
             - docker save -o bc-msh-config.tar bc-msh-config
             - cache store bc-msh-config-docker-image-$SEMAPHORE_GIT_SHA bc-msh-config.tar
-    skip:
-      when: branch != 'main'
 
 promotions:
   - name: Bump Version
