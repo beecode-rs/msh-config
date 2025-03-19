@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/beecode-rs/msh-config/compare/v1.1.0...v1.1.1) (2025-03-19)
+
+
+### Bug Fixes
+
+* rename config files and update dependencies for eslint and prettier ([6bb3443](https://github.com/beecode-rs/msh-config/commit/6bb34439e6f228e31541be50328465c7a5591b60))
+* rename semantic-release-config.mjs to semantic-release-config.js ([69bd33c](https://github.com/beecode-rs/msh-config/commit/69bd33cf76b8b74b2a396e7a344a25f67db3b7e4))
+
 # [1.1.0](https://github.com/beecode-rs/msh-config/compare/v1.0.0...v1.1.0) (2024-05-08)
 
 
