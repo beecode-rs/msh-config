@@ -1,6 +1,5 @@
 {
 	"reject": [
-		"eslint",
-		"eslint-config-prettier"
+		"typescript"
 	]
 }
