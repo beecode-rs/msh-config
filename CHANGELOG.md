@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/beecode-rs/msh-config/compare/v1.1.1...v1.1.2) (2025-03-20)
+
+
+### Bug Fixes
+
+* update typescript-eslint to version 8.27.0 ([2ae5854](https://github.com/beecode-rs/msh-config/commit/2ae5854b6f91be8f9a465b68c6006f8c3b9dc66c))
+
 ## [1.1.1](https://github.com/beecode-rs/msh-config/compare/v1.1.0...v1.1.1) (2025-03-19)
 
 
