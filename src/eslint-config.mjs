@@ -46,8 +46,9 @@ export default tseslint.config(
 
 		// DISABLE STRICT
 		'@typescript-eslint/consistent-type-definitions': 'off',
+		'@typescript-eslint/no-redundant-type-constituents':'warn',
 
-			'@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
+		'@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
 
 		'@typescript-eslint/dot-notation': 'off',
 
