@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/beecode-rs/msh-config/compare/v1.1.2...v1.1.3) (2025-03-20)
+
+
+### Bug Fixes
+
+* update eslint configuration to add no-redundant-type-constituents rule ([b7f38db](https://github.com/beecode-rs/msh-config/commit/b7f38dbaee86773f6f4f858e41bc6d40934c464d))
+
 ## [1.1.2](https://github.com/beecode-rs/msh-config/compare/v1.1.1...v1.1.2) (2025-03-20)
 
 
