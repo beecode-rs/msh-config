@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/beecode-rs/msh-config/compare/v1.1.3...v1.1.4) (2025-03-23)
+
+
+### Bug Fixes
+
+* refactor ESLint configuration and update dependencies ([ef4e80f](https://github.com/beecode-rs/msh-config/commit/ef4e80f9472de03e178b05180a9e68764337e2e8))
+
 ## [1.1.3](https://github.com/beecode-rs/msh-config/compare/v1.1.2...v1.1.3) (2025-03-20)
 
 
