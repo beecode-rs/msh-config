@@ -1,9 +1,11 @@
-import eslint from '@eslint/js'
+import eslintJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 import noLoops from 'eslint-plugin-no-loops'
 import sortKeysFix from 'eslint-plugin-sort-keys-fix'
 import noOnlyTests from 'eslint-plugin-no-only-tests'
 import eslintPluginImport from 'eslint-plugin-import'
+import globals from 'globals'
 
 const namingConvention = () => {
 	// prettier-ignore
@@ -21,9 +23,13 @@ const namingConvention = () => {
 	]
 }
 
-export default tseslint.config(
-	eslint.configs.recommended,
+export default defineConfig([
+	{ files: ['**/*.{js,mjs,cjs,ts}'] },
+	{ files: ['**/*.{js,mjs,cjs,ts}'], languageOptions: { globals: globals.browser } },
+	{ files: ['**/*.{js,mjs,cjs,ts}'], plugins: { eslintJs }, extends: ['eslintJs/recommended'] },
 	tseslint.configs.recommendedTypeChecked,
+	tseslint.configs.strictTypeChecked,
+	tseslint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
 			parser: tseslint.parser,
@@ -43,10 +49,9 @@ export default tseslint.config(
 		},
 		files: ['**/*.ts'],
 		rules: {
-
 			// DISABLE STRICT
 			'@typescript-eslint/consistent-type-definitions': 'off',
-			'@typescript-eslint/no-redundant-type-constituents':'warn',
+			'@typescript-eslint/no-redundant-type-constituents': 'warn',
 
 			'@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
 
@@ -68,12 +73,12 @@ export default tseslint.config(
 
 			'@typescript-eslint/no-unused-vars': [
 				'warn',
-					{
-						argsIgnorePattern: '^_',
-						caughtErrorsIgnorePattern: '^_',
-						destructuredArrayIgnorePattern: '^_',
-						varsIgnorePattern: '^_',
-					},
+				{
+					argsIgnorePattern: '^_',
+					caughtErrorsIgnorePattern: '^_',
+					destructuredArrayIgnorePattern: '^_',
+					varsIgnorePattern: '^_',
+				},
 			],
 
 			'@typescript-eslint/no-unsafe-assignment': 'warn',
@@ -168,6 +173,6 @@ export default tseslint.config(
 					paths: ['./'],
 				},
 			},
+		},
 	},
-}
-)
+])
