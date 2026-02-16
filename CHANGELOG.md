@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/beecode-rs/msh-config/compare/v1.1.5...v1.1.6) (2026-02-16)
+
+
+### Bug Fixes
+
+*  lint issue ([3efe17e](https://github.com/beecode-rs/msh-config/commit/3efe17edfcdc50e6b24078ebedb78401256d0717))
+* resolve package issue ([b75c8ba](https://github.com/beecode-rs/msh-config/commit/b75c8ba13daa6a73e1f1e4980d191f800d272fe7))
+* update packages ([a7cd871](https://github.com/beecode-rs/msh-config/commit/a7cd87189708c1237c947f7605ca391f432ae2a9))
+
 ## [1.1.5](https://github.com/beecode-rs/msh-config/compare/v1.1.4...v1.1.5) (2025-03-27)
 
 
