@@ -4,7 +4,8 @@ import { defineConfig } from 'eslint/config'
 import noLoops from 'eslint-plugin-no-loops'
 import sortKeysFix from 'eslint-plugin-sort-keys-fix'
 import noOnlyTests from 'eslint-plugin-no-only-tests'
-import eslintPluginImport from 'eslint-plugin-import'
+import eslintPluginImport from 'eslint-plugin-import-x'
+import prettierConfig from 'eslint-config-prettier'
 import globals from 'globals'
 
 const namingConvention = () => {
@@ -107,18 +108,13 @@ export default defineConfig([
 				'error',
 				{
 					alphabetize: {
-						caseInsensitive: false,
+						caseInsensitive: true,
 						order: 'asc',
 					},
-					groups: [['index', 'sibling', 'parent', 'internal', 'external', 'builtin', 'object']],
+					groups: ['builtin', 'external', ['parent', 'sibling', 'index'], 'object', 'type'],
 					'newlines-between': 'always',
 				},
 			],
-
-			// PRETTIER
-			'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-
-			'no-confusing-arrow': 'error',
 
 			'no-console': 'error',
 
@@ -128,8 +124,6 @@ export default defineConfig([
 
 			// NO_LOOPS
 			'no-loops/no-loops': 'error',
-
-			'no-mixed-spaces-and-tabs': 'error',
 
 			//NO_ONLY_TESTS
 			'no-only-tests/no-only-tests': 'error',
@@ -175,4 +169,5 @@ export default defineConfig([
 			},
 		},
 	},
+	prettierConfig,
 ])
