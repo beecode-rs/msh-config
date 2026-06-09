@@ -14,7 +14,6 @@
 	"module": "./src/index.js",
 	"scripts": {
 		"build": "echo 'No build script'",
-		"build-cjs": "echo 'No build script'",
 		"doc": "concurrently -c auto 'npm:doc:*'",
 		"doc:toc": "npx markdown-toc -i ./README.md",
 		"init": "concurrently -c auto 'npm:init:*'",
