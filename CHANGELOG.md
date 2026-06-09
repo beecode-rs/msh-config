@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/beecode-rs/msh-config/compare/v1.1.6...v1.1.7) (2026-06-09)
+
+
+### Bug Fixes
+
+* update base image to node22.22.1 ([#105](https://github.com/beecode-rs/msh-config/issues/105)) ([9a47abd](https://github.com/beecode-rs/msh-config/commit/9a47abd9591d373e505d47d3009ecf0d038401ad))
+
 ## [1.1.6](https://github.com/beecode-rs/msh-config/compare/v1.1.5...v1.1.6) (2026-02-16)
 
 
