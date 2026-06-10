@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/beecode-rs/msh-config/compare/v1.1.11...v1.1.12) (2026-06-10)
+
+
+### Bug Fixes
+
+* update lockfile on release ([6a88ddf](https://github.com/beecode-rs/msh-config/commit/6a88ddf40811d0b592357e21cf67de94c122014c))
+
 ## [1.1.11](https://github.com/beecode-rs/msh-config/compare/v1.1.10...v1.1.11) (2026-06-10)
 
 
