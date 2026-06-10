@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/beecode-rs/msh-config/compare/v1.1.10...v1.1.11) (2026-06-10)
+
+
+### Bug Fixes
+
+* update dependencies ([6f45e90](https://github.com/beecode-rs/msh-config/commit/6f45e907318f7d434f8dddfeee36f0ac2d29a10f))
+
 ## [1.1.10](https://github.com/beecode-rs/msh-config/compare/v1.1.9...v1.1.10) (2026-06-10)
 
 
