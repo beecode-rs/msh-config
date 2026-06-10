@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/beecode-rs/msh-config/compare/v1.1.9...v1.1.10) (2026-06-10)
+
+
+### Bug Fixes
+
+* update semantic-release ([2ed19be](https://github.com/beecode-rs/msh-config/commit/2ed19be65fb5f4727c1703ed63f9334e727265a7))
+
 ## [1.1.9](https://github.com/beecode-rs/msh-config/compare/v1.1.8...v1.1.9) (2026-06-10)
 
 
