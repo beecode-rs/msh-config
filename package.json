@@ -32,6 +32,7 @@
 		"lint-prettier-fix": "prettier --write {**/*,*}.{js,ts,jsx,tsx,cjs,cts,mjs,mts,html}",
 		"npm-depcheck": "npx depcheck",
 		"npm-lock-file-generate": "npm i --package-lock-only --prefix ./",
+		"docker-run-package-lock-update": "npm run npm-lock-file-generate",
 		"npm-ncu-check": "npx ncu",
 		"npm-ncu-update": "npx ncu -u",
 		"npm-semantic-release": "semantic-release",
