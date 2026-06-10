@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/beecode-rs/msh-config/compare/v1.1.8...v1.1.9) (2026-06-10)
+
+
+### Bug Fixes
+
+* use built-in sort-keys rule ([a3e6e2e](https://github.com/beecode-rs/msh-config/commit/a3e6e2e9433d4dc0d0513b5ea212a8ab44b37797))
+
 ## [1.1.8](https://github.com/beecode-rs/msh-config/compare/v1.1.7...v1.1.8) (2026-06-09)
 
 
