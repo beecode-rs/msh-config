@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/beecode-rs/msh-config/compare/v1.1.12...v1.2.0) (2026-06-10)
+
+
+### Bug Fixes
+
+* avoid lock file reformatting ([0d52342](https://github.com/beecode-rs/msh-config/commit/0d52342462b1719e9d27e33f0fa13d38cd7b1ecc))
+
+
+### Features
+
+* add lock version update cli ([169a585](https://github.com/beecode-rs/msh-config/commit/169a58566f22b00d528f15961586e5be0ff4ca74))
+
 ## [1.1.12](https://github.com/beecode-rs/msh-config/compare/v1.1.11...v1.1.12) (2026-06-10)
 
 
