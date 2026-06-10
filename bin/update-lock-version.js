@@ -8,7 +8,7 @@
  *   1. Top-level "version": "x.y.z"
  *   2. packages[""]["version"]: "x.y.z"
  *
- * Usage: node update-lock-version.js <new-version>
+ * Usage: npx msh-update-lock-version <new-version>
  */
 
 'use strict'
@@ -17,7 +17,7 @@ const fs = require('fs')
 
 const newVersion = process.argv[2]
 if (!newVersion) {
-	console.error('Usage: node update-lock-version.js <new-version>')
+	console.error('Usage: npx msh-update-lock-version <new-version>')
 	process.exit(1)
 }
 

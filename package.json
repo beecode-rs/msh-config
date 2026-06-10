@@ -12,6 +12,9 @@
 	"type": "commonjs",
 	"main": "./src/index.js",
 	"module": "./src/index.js",
+	"bin": {
+		"msh-update-lock-version": "./bin/update-lock-version.js"
+	},
 	"scripts": {
 		"build": "echo 'No build script'",
 		"doc": "concurrently -c auto 'npm:doc:*'",

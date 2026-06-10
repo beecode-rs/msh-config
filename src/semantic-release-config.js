@@ -7,7 +7,7 @@ module.exports = {
 			'@semantic-release/exec',
 			{
 				prepareCmd:
-					'echo VERSION=${nextRelease.version} > version.txt && npm version ${nextRelease.version} && node ./node_modules/@beecode/msh-config/src/update-lock-version.js "${nextRelease.version}"',
+					'echo VERSION=${nextRelease.version} > version.txt && npm version ${nextRelease.version} && npx msh-update-lock-version "${nextRelease.version}"',
 			},
 		],
 		'@semantic-release/changelog',
