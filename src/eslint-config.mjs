@@ -2,7 +2,7 @@ import eslintJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import { defineConfig } from 'eslint/config'
 import noLoops from 'eslint-plugin-no-loops'
-import sortKeysFix from 'eslint-plugin-sort-keys-fix'
+
 import noOnlyTests from 'eslint-plugin-no-only-tests'
 import eslintPluginImport from 'eslint-plugin-import-x'
 import prettierConfig from 'eslint-config-prettier'
@@ -45,7 +45,7 @@ export default defineConfig([
 			'@typescript-eslint': tseslint.plugin,
 			'no-loops': noLoops,
 			'no-only-tests': noOnlyTests,
-			'sort-keys-fix': sortKeysFix,
+
 			import: eslintPluginImport,
 		},
 		files: ['**/*.ts'],
@@ -158,8 +158,7 @@ export default defineConfig([
 					ignoreDeclarationSort: true,
 				},
 			],
-			// SORT_KEYS_FIX
-			'sort-keys-fix/sort-keys-fix': ['error', 'asc', { caseSensitive: false, natural: true }],
+			'sort-keys': ['error', 'asc', { caseSensitive: false, natural: true }],
 		},
 		settings: {
 			'import/resolver': {
