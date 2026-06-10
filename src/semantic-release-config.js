@@ -6,7 +6,8 @@ module.exports = {
 		[
 			'@semantic-release/exec',
 			{
-				prepareCmd: 'echo VERSION=${nextRelease.version} > version.txt && npm version ${nextRelease.version}',
+				prepareCmd:
+					'echo VERSION=${nextRelease.version} > version.txt && npm version ${nextRelease.version} && npm i --package-lock-only --prefix ./',
 			},
 		],
 		'@semantic-release/changelog',
