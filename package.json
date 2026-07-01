@@ -10,8 +10,11 @@
 	"license": "ISC",
 	"author": "",
 	"type": "commonjs",
-	"main": "./src/index.js",
-	"module": "./src/index.js",
+	"exports": {
+		"./eslint-config": "./src/eslint-config.mjs",
+		"./prettier-config": "./src/prettier-config.js",
+		"./semantic-release-config": "./src/semantic-release-config.js"
+	},
 	"bin": {
 		"msh-update-lock-version": "./bin/update-lock-version.js"
 	},
