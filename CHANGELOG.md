@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/beecode-rs/msh-config/compare/v1.2.0...v1.2.1) (2026-07-01)
+
+
+### Bug Fixes
+
+* switch to exports field ([a65b860](https://github.com/beecode-rs/msh-config/commit/a65b8604b7cff192db58902b93000e92635e4f69))
+
 # [1.2.0](https://github.com/beecode-rs/msh-config/compare/v1.1.12...v1.2.0) (2026-06-10)
 
 
